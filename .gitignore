@@ -68,3 +68,5 @@ Procfile
 
 # Render/YAML configs
 render.yaml
+.env
+.env
