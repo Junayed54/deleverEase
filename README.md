@@ -47,8 +47,26 @@ DeliverEase enables customers to place orders, admins to assign delivery men, an
 ### 🔐 Auth
 | Endpoint              | Method | Description        |
 |-----------------------|--------|--------------------|
-| `/api/login/`         | POST   | Login with credentials |
 | `/api/register/`      | GET    | Register user (likely should be POST) |
+| `/api/login/`         | POST   | Login with credentials |
+
+
+**Register Request**:
+```json
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "password": "your_secure_password",
+  "phone": "01712345678"
+}
+```
+**Login Request**:
+```json
+{
+  "email": "admin@gmail.com",
+  "password": "123"
+}
+````
 
 ### 👤 User Profile
 | Endpoint              | Method | Description             |
@@ -61,28 +79,57 @@ DeliverEase enables customers to place orders, admins to assign delivery men, an
 |--------------------------------------------|--------|---------------------------------|
 | `/api/orders/create/`                      | POST   | Create a new order              |
 | `/api/orders/`                              | GET    | List all orders (admin/user-specific) |
-| `/api/orders/<id>/assign-delivery-man/`    | PATCH  | Assign a delivery man (admin only) |
-| `/api/orders/<id>/update-status/`          | PATCH  | Update order status (delivery man) |
+| `/api/orders/<order-id>/assign-delivery-man/`    | PATCH  | Assign a delivery man (admin only) |
+| `/api/orders/<oreder-id>/update-status/`          | PATCH  | Update order status (delivery man) |
+*** Create Order Request
+```json
+{
+  "address": "Dhaka, Bangladesh",
+  "delivery_fee": "120"
+}
+```
 
+*** Assign Delivery Man Request
+```json
+{
+  "delivery_man_id": "3"
+}
+
+```
+
+*** Update Order Status Request
+```json
+{
+  "status": "delivered"
+}
+```
 ### 💳 Payments
 | Endpoint                          | Method | Description               |
 |-----------------------------------|--------|---------------------------|
 | `/api/payment/initialize/`       | POST   | Initialize Stripe payment |
 | `/api/payment/confirm/`          | POST   | Confirm Stripe payment    |
 
----
 
-## 🔗 Relation Diagram
+*** Initialize Payment Reque
 
-📎 **ERD Diagram**:  
-_Embed or link here if available_  
-_If you don’t have one yet, you can generate one using [dbdiagram.io](https://dbdiagram.io) or [drawsql.app](https://drawsql.app) and link it here._
+``` json
+{
+  "order_id": "1"
+}
+```
 
+*** Confirm Payment Request
+``` json
+{
+  "payment_intent_id": "pi_3Rhrru2c9fRNbzBx1DSRqp4f"
+}
+
+```
 ---
 
 ## 🔗 Links
 
-- 📂 GitHub Repository: [https://github.com/yourusername/deliverease](https://github.com/yourusername/deliverease)
+- 📂 GitHub Repository: [https://github.com/Junayed54/deliverease](https://github.com/Junayed546/deliverease)
 - 🌐 Live API: [https://deliverease-2.onrender.com](https://deliverease-1.onrender.com)
 - 📬 Postman Collection: [View Collection](https://bold-shuttle-486769.postman.co/workspace/SM-Technoly~f1bb514e-5f69-44fb-9b56-3e27013e6a5a/collection/25281354-7faf8d08-abca-4bba-a8eb-e802101ffbf6?action=share&source=collection_link&creator=25281354)
 
