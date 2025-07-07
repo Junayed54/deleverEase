@@ -131,8 +131,6 @@ DeliverEase enables customers to place orders, admins to assign delivery men, an
 
 - 📂 GitHub Repository: [https://github.com/Junayed54/deliverease](https://github.com/Junayed546/deliverease)
 - 🌐 Live API: [https://deliverease-2.onrender.com](https://deliverease-1.onrender.com)
-- 📬 Postman Collection: [View Collection](https://bold-shuttle-486769.postman.co/workspace/SM-Technoly~f1bb514e-5f69-44fb-9b56-3e27013e6a5a/collection/25281354-7faf8d08-abca-4bba-a8eb-e802101ffbf6?action=share&source=collection_link&creator=25281354)
-
 ---
 
 ## 🚀 Getting Started
@@ -146,8 +144,8 @@ DeliverEase enables customers to place orders, admins to assign delivery men, an
 ### 📦 Installation
 
 ```bash
-git clone https://github.com/yourusername/deliverease.git
-cd deliverease
+git clone https://github.com/Junayed54/deleverEase.git
+cd deleverEase
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
