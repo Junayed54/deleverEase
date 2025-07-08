@@ -130,7 +130,7 @@ DeliverEase enables customers to place orders, admins to assign delivery men, an
 ## 🔗 Links
 
 - 📂 GitHub Repository: [https://github.com/Junayed54/deliverease](https://github.com/Junayed546/deliverease)
-- 🌐 Live API: [https://deliverease-2.onrender.com](https://deliverease-1.onrender.com)
+- 🌐 Live API: [https://deliverease-2.onrender.com](https://deleverease-2.onrender.com/)
 ---
 
 ## 🚀 Getting Started
